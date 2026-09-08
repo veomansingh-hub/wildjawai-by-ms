@@ -53,9 +53,31 @@ export default function EnquiryPlanner() {
     if (currentStep > 0) setCurrentStep((prev) => prev - 1);
   };
 
+  const buildWhatsAppMessage = () => {
+    return encodeURIComponent(
+      `Hello Wild Jawai, I would like to plan a journey.\n\n` +
+      `• Name: ${contactInfo.name}\n` +
+      `• Estimated Dates: ${when}\n` +
+      `• Travellers: ${adults} Adults, ${children} Children\n` +
+      `• Interests: ${focusOptions.join(", ") || "General"}\n` +
+      `• Stay Style: ${stayStyle || "Help me choose"}\n` +
+      `• Arriving From: ${arrival || "TBD"}\n` +
+      (anythingElse ? `• Notes: ${anythingElse}\n` : "") +
+      `• Email: ${contactInfo.email}\n` +
+      (contactInfo.phone ? `• Phone: ${contactInfo.phone}\n` : "")
+    );
+  };
+
   const submit = () => {
     if (canGoNext()) {
       setIsSubmitted(true);
+      // Construct verified WhatsApp dispatch link
+      const text = buildWhatsAppMessage();
+      const waLink = `https://wa.me/919983721179?text=${text}`;
+      // Open in new tab/window
+      if (typeof window !== "undefined") {
+        window.open(waLink, "_blank");
+      }
     }
   };
 
@@ -68,24 +90,56 @@ export default function EnquiryPlanner() {
   const isLastStep = currentStep === steps.length - 1;
 
   if (isSubmitted) {
+    const text = buildWhatsAppMessage();
+    const waLink = `https://wa.me/919983721179?text=${text}`;
+    const mailtoLink = `mailto:hello@wildjawai.in?subject=${encodeURIComponent("Jawai Safari Enquiry - " + contactInfo.name)}&body=${text}`;
+
     return (
-      <div className="min-h-[100svh] bg-ivory text-basalt flex flex-col items-center justify-center px-6">
+      <div className="min-h-[100svh] bg-ivory text-basalt flex flex-col items-center justify-center px-6 py-20">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.8 }}
           className="max-w-2xl text-center"
         >
-          <span className="text-terracotta text-xs tracking-widest uppercase mb-8 block">Enquiry Received</span>
-          <h1 className="font-serif text-5xl md:text-7xl mb-8 leading-tight">
+          <span className="text-terracotta text-xs tracking-[0.3em] uppercase mb-6 block">Enquiry Prepared</span>
+          <h1 className="font-serif text-4xl md:text-6xl mb-6 leading-tight">
             THANK YOU, <br /> {contactInfo.name.toUpperCase()}.
           </h1>
-          <p className="text-xl font-light text-basalt/80 mb-16">
-            We have received your details. One of our local specialists will review your preferences and contact you shortly to begin shaping your journey.
+          <p className="text-lg md:text-xl font-light text-basalt/80 mb-10 leading-relaxed">
+            Your trip details have been compiled. We opened WhatsApp so you can review your message and send it directly to our on-ground team.
           </p>
-          <Link href="/" className="inline-block border border-basalt px-10 py-5 text-xs tracking-widest uppercase hover:bg-basalt hover:text-white transition-colors">
-            Return to Homepage
-          </Link>
+
+          <div className="p-6 bg-sand/60 border border-basalt/10 text-left text-xs md:text-sm font-mono text-basalt/70 mb-10 space-y-2 whitespace-pre-line leading-relaxed">
+            {`• Dates: ${when}
+• Group: ${adults} Adults, ${children} Children
+• Focus: ${focusOptions.join(", ") || "General"}
+• Stay: ${stayStyle || "Help me choose"}
+• Arriving from: ${arrival || "TBD"}`}
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a 
+              href={waLink}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 py-4 bg-basalt text-white text-xs tracking-widest uppercase hover:bg-terracotta transition-colors"
+            >
+              Open in WhatsApp Again
+            </a>
+            <a 
+              href={mailtoLink}
+              className="w-full sm:w-auto px-8 py-4 border border-basalt/30 text-basalt text-xs tracking-widest uppercase hover:border-basalt transition-colors"
+            >
+              Send via Email Instead
+            </a>
+          </div>
+
+          <div className="mt-12">
+            <Link href="/" className="text-xs tracking-widest uppercase text-basalt/60 hover:text-basalt underline underline-offset-4">
+              Return to Homepage
+            </Link>
+          </div>
         </motion.div>
       </div>
     );

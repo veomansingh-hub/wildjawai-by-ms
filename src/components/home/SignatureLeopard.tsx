@@ -42,6 +42,9 @@ export default function SignatureLeopard() {
           <p>
             However, experienced trackers, deep local understanding, good timing and patience give you the best possible opportunity for a genuine encounter.
           </p>
+          <div className="pt-6 border-t border-white/10 text-[11px] tracking-[0.25em] uppercase text-sand/60">
+            PRIVATE SAFARIS &middot; LOCAL JAWAI KNOWLEDGE &middot; DIRECT ON-GROUND SUPPORT
+          </div>
         </motion.div>
       </div>
     </section>

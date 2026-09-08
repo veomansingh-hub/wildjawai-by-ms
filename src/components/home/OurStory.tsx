@@ -34,17 +34,24 @@ export default function OurStory() {
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-10">
               TWO PERSPECTIVES. <br /> ONE JAWAI.
             </h2>
-            <div className="space-y-6 text-lg font-light text-basalt/80">
+            <div className="space-y-6 text-lg font-light text-basalt/80 mb-10">
               <p>
-                Wild Jawai was born from a unique intersection. One perspective intimately understands what the discerning international traveller seeks—the pacing, the privacy, and the quiet expectation of luxury.
+                Wild Jawai was born from a unique intersection. Man Singh spent 17 years living and travelling across Europe, Asia and South America, bringing the discerning traveller&apos;s standard for clear communication, calm pacing and genuine support.
               </p>
               <p>
-                The other perspective was formed by a lifetime lived within this very landscape—knowing the rhythm of the granite hills, reading the dust, and holding deep, generational respect for the leopards and the Rabari people.
+                Kalpesh Deora was born and raised in the Jawai region, knowing its granite hills, pastoral villages and leopard habitats through a lifetime of quiet, generational relationships.
               </p>
               <p>
-                Together, we do not just book safaris. We quietly open the true destination for our guests.
+                Together, we do not simply arrange safaris. We quietly open the true destination for our guests.
               </p>
             </div>
+
+            <a
+              href="/our-story"
+              className="inline-block border-b border-basalt pb-1 text-xs tracking-widest uppercase hover:text-terracotta hover:border-terracotta transition-colors font-medium"
+            >
+              Read Our Full Story &rarr;
+            </a>
           </motion.div>
         </div>
 

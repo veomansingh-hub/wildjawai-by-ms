@@ -77,19 +77,21 @@ export default function Journal() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
-                className={`${colSpan} group cursor-pointer flex flex-col`}
+                className={`${colSpan} group flex flex-col`}
               >
-                <div className={`w-full overflow-hidden mb-6 ${aspect}`}>
-                  <img 
-                    src={article.image} 
-                    alt={article.title}
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                  />
-                </div>
-                <span className="text-terracotta text-xs tracking-widest uppercase mb-3">{article.category}</span>
-                <h3 className="font-serif text-2xl md:text-3xl leading-snug group-hover:text-terracotta transition-colors">
-                  {article.title}
-                </h3>
+                <Link href="/journal" className="flex flex-col">
+                  <div className={`w-full overflow-hidden mb-6 ${aspect}`}>
+                    <img 
+                      src={article.image} 
+                      alt={article.title}
+                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                    />
+                  </div>
+                  <span className="text-terracotta text-xs tracking-widest uppercase mb-3">{article.category}</span>
+                  <h3 className="font-serif text-2xl md:text-3xl leading-snug group-hover:text-terracotta transition-colors">
+                    {article.title}
+                  </h3>
+                </Link>
               </motion.div>
             );
           })}

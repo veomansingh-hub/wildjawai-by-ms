@@ -3,15 +3,15 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MessageCircle, Phone } from "lucide-react";
+import { CONTACT } from "@/lib/constants";
 
 const links = [
   { name: "Experiences", href: "/#experiences" },
   { name: "Safaris", href: "/#safari" },
   { name: "Stays", href: "/#stays" },
-  { name: "Jawai", href: "/#jawai" },
-  { name: "Our Story", href: "/#story" },
-  { name: "Journal", href: "/#journal" },
+  { name: "Our Story", href: "/our-story" },
+  { name: "Journal", href: "/journal" },
 ];
 
 export default function Navigation() {
@@ -46,7 +46,7 @@ export default function Navigation() {
             Wild Jawai
           </Link>
 
-          <nav className="hidden lg:flex gap-10 text-[11px] tracking-widest uppercase">
+          <nav className="hidden lg:flex gap-8 text-[11px] tracking-widest uppercase">
             {links.map((link) => (
               <Link key={link.name} href={link.href} className="hover:text-terracotta transition-colors">
                 {link.name}
@@ -54,10 +54,23 @@ export default function Navigation() {
             ))}
           </nav>
 
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center gap-6">
+            <a
+              href={CONTACT.whatsAppUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-[11px] tracking-widest uppercase flex items-center gap-1.5 transition-colors ${
+                isScrolled ? "text-basalt/75 hover:text-terracotta" : "text-white/85 hover:text-white"
+              }`}
+              title="Message on WhatsApp"
+            >
+              <MessageCircle className="w-3.5 h-3.5 text-terracotta" strokeWidth={1.5} />
+              <span>WhatsApp</span>
+            </a>
+
             <Link
               href="/plan"
-              className={`text-[10px] tracking-widest uppercase border px-8 py-4 transition-colors ${
+              className={`text-[10px] tracking-widest uppercase border px-6 py-3 transition-colors ${
                 isScrolled
                   ? "border-basalt hover:bg-basalt hover:text-white"
                   : "border-white hover:bg-white hover:text-basalt"
@@ -67,12 +80,24 @@ export default function Navigation() {
             </Link>
           </div>
 
-          <button
-            className="lg:hidden p-2 -mr-2"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <Menu className="w-6 h-6" strokeWidth={1.5} />
-          </button>
+          <div className="lg:hidden flex items-center gap-3">
+            <a
+              href={CONTACT.whatsAppUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-terracotta"
+              aria-label="Chat on WhatsApp"
+            >
+              <MessageCircle className="w-5 h-5" strokeWidth={1.75} />
+            </a>
+            <button
+              className="p-2 -mr-2"
+              onClick={() => setMobileMenuOpen(true)}
+              aria-label="Open menu"
+            >
+              <Menu className="w-6 h-6" strokeWidth={1.5} />
+            </button>
+          </div>
         </div>
       </header>
 
@@ -82,32 +107,33 @@ export default function Navigation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
-            className="fixed inset-0 z-[60] bg-ivory text-basalt flex flex-col"
+            transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
+            className="fixed inset-0 z-[60] bg-ivory text-basalt flex flex-col justify-between"
           >
-            <div className="px-6 py-8 flex items-center justify-between h-auto">
+            <div className="px-6 py-8 flex items-center justify-between h-auto border-b border-basalt/10">
               <Link href="/" className="font-serif text-2xl tracking-[0.2em] uppercase" onClick={() => setMobileMenuOpen(false)}>
                 Wild Jawai
               </Link>
               <button
                 className="p-2 -mr-2 text-basalt"
                 onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
               >
-                <X className="w-8 h-8" strokeWidth={1} />
+                <X className="w-7 h-7" strokeWidth={1.5} />
               </button>
             </div>
 
-            <div className="flex-1 flex flex-col items-center justify-center gap-10 pb-20">
+            <div className="flex-1 flex flex-col items-center justify-center gap-8 py-12">
               {links.map((link, idx) => (
                 <motion.div
                   key={link.name}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 * idx, duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+                  transition={{ delay: 0.08 * idx, duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
                 >
                   <Link
                     href={link.href}
-                    className="font-serif text-4xl md:text-5xl hover:text-terracotta transition-colors"
+                    className="font-serif text-3xl md:text-4xl hover:text-terracotta transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.name}
@@ -117,17 +143,33 @@ export default function Navigation() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.6, duration: 1 }}
-                className="mt-8"
+                transition={{ delay: 0.5, duration: 0.6 }}
+                className="mt-4 flex flex-col items-center gap-4 w-full px-8 max-w-xs"
               >
                 <Link
                   href="/plan"
-                  className="text-xs tracking-widest uppercase border border-basalt px-10 py-5 hover:bg-basalt hover:text-white transition-colors"
+                  className="w-full text-center text-xs tracking-widest uppercase border border-basalt px-8 py-4 bg-basalt text-white hover:bg-terracotta hover:border-terracotta transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Plan Your Journey
                 </Link>
+                <a
+                  href={CONTACT.whatsAppUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full text-center text-xs tracking-widest uppercase border border-basalt/20 px-8 py-3.5 hover:border-basalt transition-colors flex items-center justify-center gap-2"
+                >
+                  <MessageCircle className="w-4 h-4 text-terracotta" strokeWidth={1.5} />
+                  WhatsApp Direct
+                </a>
               </motion.div>
+            </div>
+
+            <div className="px-6 py-6 border-t border-basalt/10 text-center text-xs text-basalt/60">
+              <p>{CONTACT.location}</p>
+              <a href={CONTACT.telUrl} className="mt-1 inline-block hover:text-terracotta transition-colors font-medium">
+                {CONTACT.phone}
+              </a>
             </div>
           </motion.div>
         )}

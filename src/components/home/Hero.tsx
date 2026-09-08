@@ -69,7 +69,7 @@ export default function Hero() {
             Begin Your Journey
           </Link>
           <Link
-            href="#experiences"
+            href="/#experiences"
             className="w-full sm:w-auto px-10 py-4 border border-white/40 text-white text-xs tracking-widest uppercase hover:border-white transition-colors"
           >
             Discover Jawai

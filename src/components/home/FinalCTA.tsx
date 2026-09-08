@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { CONTACT } from "@/lib/constants";
 
 export default function FinalCTA() {
   return (
@@ -51,13 +52,15 @@ export default function FinalCTA() {
         >
           <Link
             href="/plan"
-            className="px-10 py-5 bg-white text-basalt text-xs tracking-widest uppercase hover:bg-ivory transition-colors w-full sm:w-auto"
+            className="px-10 py-5 bg-white text-basalt text-xs tracking-widest uppercase hover:bg-ivory transition-colors w-full sm:w-auto font-medium"
           >
             Plan My Jawai Journey
           </Link>
           <a
-            href="#"
-            className="px-10 py-5 border border-white/30 text-white text-xs tracking-widest uppercase hover:border-white transition-colors w-full sm:w-auto"
+            href={CONTACT.whatsAppUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-10 py-5 border border-white/30 text-white text-xs tracking-widest uppercase hover:border-white hover:bg-white/10 transition-colors w-full sm:w-auto"
           >
             WhatsApp Wild Jawai
           </a>

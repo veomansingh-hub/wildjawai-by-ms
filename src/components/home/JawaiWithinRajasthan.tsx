@@ -36,7 +36,7 @@ export default function JawaiWithinRajasthan() {
           </p>
         </motion.div>
 
-        <div className="flex flex-col items-center gap-8 max-w-md mx-auto">
+        <div className="flex flex-col items-center gap-8 max-w-md mx-auto mb-16">
           {routes.map((city, idx) => (
             <motion.div 
               key={city}
@@ -54,6 +54,19 @@ export default function JawaiWithinRajasthan() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <a
+            href="/plan"
+            className="inline-block text-xs tracking-widest uppercase border-b border-basalt pb-1 hover:text-terracotta hover:border-terracotta transition-colors font-medium"
+          >
+            Coordinate Private Intercity Transfers &rarr;
+          </a>
+        </motion.div>
       </div>
     </section>
   );

@@ -4,8 +4,40 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Wild Jawai — The Wild Side of Rajasthan",
-  description: "Private Jawai leopard safaris, handpicked stays, and tailored journeys shaped by people who know Jawai.",
+  metadataBase: new URL("https://wildjawai.in"),
+  title: {
+    default: "Wild Jawai — Private Leopard Safaris & Handpicked Stays",
+    template: "%s | Wild Jawai"
+  },
+  description: "Private Jawai leopard safaris, handpicked camps, and tailored Rajasthan journeys shaped with patience and deep local knowledge.",
+  alternates: {
+    canonical: "/"
+  },
+  openGraph: {
+    title: "Wild Jawai — The Wild Side of Rajasthan",
+    description: "Private safaris, considered stays and journeys shaped by people who know Jawai.",
+    url: "https://wildjawai.in",
+    siteName: "Wild Jawai",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Wild Jawai — private safaris, thoughtfully handled"
+      }
+    ],
+    locale: "en_IN",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wild Jawai — Private Leopard Safaris & Handpicked Stays",
+    description: "Private safaris, considered stays and journeys shaped by people who know Jawai.",
+    images: ["/og-image.jpg"]
+  },
+  icons: {
+    icon: "/favicon.svg"
+  }
 };
 
 export default function RootLayout({

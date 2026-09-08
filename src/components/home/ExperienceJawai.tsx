@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const experiences = [
@@ -80,9 +81,12 @@ export default function ExperienceJawai() {
                     <p className="text-basalt/70 font-light text-lg md:text-xl max-w-sm">
                       {exp.desc}
                     </p>
-                    <div className="mt-8 flex items-center gap-4 text-xs tracking-widest uppercase text-basalt group-hover:text-terracotta transition-colors w-max cursor-pointer">
-                      Explore <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-                    </div>
+                    <Link 
+                      href="/plan"
+                      className="mt-8 flex items-center gap-4 text-xs tracking-widest uppercase text-basalt group-hover:text-terracotta transition-colors w-max"
+                    >
+                      Plan This Experience <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                    </Link>
                   </div>
                 </motion.div>
               );
