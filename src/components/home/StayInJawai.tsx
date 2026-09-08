@@ -19,6 +19,19 @@ const categories = [
   }
 ];
 
+const partnerProperties = [
+  "UPVAN JAWAI",
+  "CASTLE BERA",
+  "BERA SAFARI LODGE",
+  "ALTURA JAWAI",
+  "AGVANI RESORT",
+  "MANA RANAKPUR",
+  "AMET HAVELI",
+  "NARAIN NIWAS PALACE",
+  "FORT BARLI",
+  "BAL SAMAND LAKE PALACE"
+];
+
 export default function StayInJawai() {
   return (
     <section id="stays" className="py-32 md:py-48 bg-sand text-basalt overflow-hidden">
@@ -85,6 +98,34 @@ export default function StayInJawai() {
           </motion.div>
         </div>
 
+      </div>
+
+      {/* Luxury Partner Stays Marquee */}
+      <div className="mt-28 md:mt-36 pt-12 border-t border-basalt/10 relative overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 mb-6">
+          <p className="text-[10px] md:text-xs tracking-[0.28em] uppercase text-terracotta font-medium">
+            Select Partner Properties &middot; Jawai &amp; Rajasthan Circuit
+          </p>
+        </div>
+
+        {/* Marquee Track with subtle edge vignettes */}
+        <div className="relative w-full overflow-hidden py-3">
+          {/* Edge fades */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-sand to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-sand to-transparent z-10" />
+
+          <div className="animate-marquee flex items-center whitespace-nowrap">
+            {[...partnerProperties, ...partnerProperties].map((property, idx) => (
+              <span 
+                key={idx} 
+                className="inline-flex items-center text-xs md:text-sm tracking-[0.24em] uppercase text-basalt/70 font-sans hover:text-basalt transition-colors px-6"
+              >
+                <span>{property}</span>
+                <span className="ml-12 text-terracotta/40 text-xs">&middot;</span>
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
