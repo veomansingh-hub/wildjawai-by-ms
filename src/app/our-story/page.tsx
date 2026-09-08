@@ -65,11 +65,12 @@ export default function OurStoryPage() {
                 Because the real luxury in travel is not excess. It is knowing that someone has thought about the details before you ever have to.
               </p>
             </div>
-            {/* Elegant placeholder for genuine founder portrait */}
-            <div className="mt-8 aspect-[4/5] bg-sand/60 relative overflow-hidden border border-basalt/10 flex items-center justify-center text-center p-8">
-              <div className="max-w-xs text-xs tracking-widest uppercase text-basalt/50 font-mono">
-                [ Authentic Portrait &middot; Man Singh ]
-              </div>
+            <div className="mt-8 aspect-[4/5] bg-sand/60 relative overflow-hidden">
+              <img 
+                src="/images/man-singh.jpg" 
+                alt="Portrait of Man Singh, Founder of Wild Jawai"
+                className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+              />
             </div>
           </div>
 
