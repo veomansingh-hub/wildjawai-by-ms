@@ -9,6 +9,15 @@ export const metadata: Metadata = {
 
 const guides = [
   {
+    slug: "how-to-reach-jawai-rajasthan",
+    title: "How to Reach Jawai, Rajasthan: Train, Airport, Bus & Transfer Guide",
+    category: "GETTING HERE",
+    readingTime: "8 min read",
+    summary: "A practical guide to trains, airports, buses, fares and transfers into Jawai. How to navigate Sumerpur–Jawai Bandh, Falna, Abu Road, and Jodhpur gateways.",
+    image: "https://images.unsplash.com/photo-1549646467-17ed488dc476?q=80&w=1000&auto=format&fit=crop",
+    details: "Essential railway options, exact station codes, verified train connections from Falna and Abu Road, Jodhpur Airport road routes, indicative public transport costs and pre-arranged station pickup logistics."
+  },
+  {
     slug: "jawai-leopard-safari",
     title: "How a Jawai leopard safari works",
     category: "Safari Guide",
@@ -25,15 +34,6 @@ const guides = [
     summary: "Peak winter window (October–March), warm summer sightings (April–June) and the monsoon transition broken down honestly.",
     image: "https://images.unsplash.com/photo-1627443178229-87a32edbaaa5?q=80&w=1000&auto=format&fit=crop",
     details: "October to March is peak season with crisp morning air, comfortable midday sunshine and maximum wildlife activity. November through February also coincides with migratory waterfowl at Jawai Dam. Summer (April–May) reaches 38–42°C in the afternoon, but leopards concentrate predictably near water holes, making dawn drives exceptionally productive."
-  },
-  {
-    slug: "how-to-reach-jawai",
-    title: "How to reach Jawai from Udaipur, Jodhpur and Jaipur",
-    category: "Logistics",
-    readingTime: "4 min read",
-    summary: "Road travel times, nearest airports (UDR/JDH), Jawai Bandh railway station details, and private transfer coordination.",
-    image: "https://images.unsplash.com/photo-1524222717473-730000096953?q=80&w=1000&auto=format&fit=crop",
-    details: "Jawai is situated in Pali district along NH 162, positioned directly between Udaipur (approx. 135 km, 2.5–3 hours) and Jodhpur (approx. 165 km, 2.5–3 hours). Maharana Pratap Airport in Udaipur (UDR) and Jodhpur Airport (JDH) receive daily flights from Delhi and Mumbai. Jawai Bandh (JWD) railway station connects directly to Delhi, Jaipur and Ahmedabad."
   },
   {
     slug: "jawai-dam-birdlife",
@@ -101,13 +101,23 @@ export default function JournalPage() {
                   </div>
                 </div>
 
-                <Link
-                  href="/plan"
-                  className="inline-flex items-center gap-3 text-xs tracking-widest uppercase font-medium text-basalt hover:text-terracotta transition-colors w-max"
-                >
-                  Plan A Trip Around This Guide
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <div className="flex items-center gap-6">
+                  <Link
+                    href={guide.slug === "how-to-reach-jawai-rajasthan" ? `/journal/${guide.slug}` : "/plan"}
+                    className="inline-flex items-center gap-3 text-xs tracking-widest uppercase font-semibold text-terracotta hover:underline underline-offset-4 transition-all w-max"
+                  >
+                    {guide.slug === "how-to-reach-jawai-rajasthan" ? "Read Full Guide" : "Plan A Trip Around This Guide"}
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  {guide.slug === "how-to-reach-jawai-rajasthan" && (
+                    <Link
+                      href="/plan"
+                      className="inline-flex items-center gap-2 text-xs tracking-widest uppercase font-medium text-basalt/60 hover:text-basalt transition-colors"
+                    >
+                      Plan A Trip
+                    </Link>
+                  )}
+                </div>
               </div>
             </article>
           ))}
