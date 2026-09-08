@@ -15,8 +15,8 @@ export default function FinalCTA() {
           whileInView={{ scale: 1.05 }}
           viewport={{ once: false }}
           transition={{ duration: 15, ease: "linear" }}
-          src="/images/jawai-landscape.jpg"
-          alt="Jawai Sunset"
+          src="/images/jawai-dam-panorama.png"
+          alt="Jawai Dam Panorama at Dusk"
           className="w-full h-full object-cover object-center"
         />
       </div>

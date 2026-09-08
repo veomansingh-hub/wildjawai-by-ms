@@ -9,25 +9,25 @@ const experiences = [
     num: "01",
     title: "LEOPARD COUNTRY",
     desc: "Private dawn and dusk drives through Jawai's granite wilderness.",
-    image: "/images/leopard-safari.jpg",
+    image: "/images/safari-jeep.jpg",
   },
   {
     num: "02",
     title: "GRANITE KOPJES",
     desc: "Centuries of wind and water shaped these dramatic hills. Walk among ancient formations that harbor wildlife, hidden shrines, and breathtaking valley views.",
-    image: "/images/jawai-landscape.jpg", 
+    image: "/images/jawai-kopjes-landscape.jpg", 
   },
   {
     num: "03",
     title: "RABARI WALKS",
     desc: "Walk with the Rabari pastoralists. Understand their deep connection with the leopards, their traditions, and how they navigate this wild terrain.",
-    image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?q=80&w=2940&auto=format&fit=crop", 
+    image: "/images/rabari-shepherd-jawai.jpg", 
   },
   {
     num: "04",
     title: "JAWAI DAM",
     desc: "The largest waterbody in western Rajasthan transforms the arid landscape, drawing flocks of migratory flamingos, pelicans, and sunning crocodiles.",
-    image: "https://images.unsplash.com/photo-1555505019-8c3f1c4aba5f?q=80&w=2940&auto=format&fit=crop", 
+    image: "/images/jawai-dam-birds.jpg", 
   }
 ];
 

@@ -9,27 +9,27 @@ const articles = [
     title: "How a Jawai leopard safari works",
     category: "Safari Guide",
     readingTime: "5 min read",
-    image: "/images/leopard-safari.jpg",
+    image: "/images/leopard-overlook.jpg",
     size: "large"
   },
   {
     title: "Best time to visit Jawai: Month-by-month guide",
     category: "Seasonality",
     readingTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/jawai-hazy-sunset.jpg",
     size: "small"
   },
   {
     title: "Rabari culture: The pastoral heart of Jawai",
     category: "Culture",
-    image: "/images/jawai-landscape.jpg",
+    image: "/images/rabari-shepherd-jawai.jpg",
     size: "small"
   },
   {
     title: "Water and wings: Birdlife around Jawai Dam",
     category: "Wildlife & Habitats",
     readingTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1555505019-8c3f1c4aba5f?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/jawai-dam-panorama.png",
     size: "medium"
   }
 ];

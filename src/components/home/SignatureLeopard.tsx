@@ -12,7 +12,7 @@ export default function SignatureLeopard() {
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          src="/images/leopard-safari.jpg"
+          src="/images/jawai-leopard-walking.jpg"
           alt="Jawai Leopard on Granite"
           className="w-full h-full object-cover object-center opacity-70"
         />

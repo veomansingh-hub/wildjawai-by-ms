@@ -95,7 +95,7 @@ export default function StayInJawai() {
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.5, ease: "easeOut" }}
-              src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=2940&auto=format&fit=crop" 
+              src="/images/luxury-tent-view.jpg" 
               alt="Luxury Canvas Tents in Jawai"
               className="w-full h-full object-cover"
             />

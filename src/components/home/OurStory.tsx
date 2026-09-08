@@ -21,8 +21,8 @@ export default function OurStory() {
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.5, ease: "easeOut" }}
-              src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?q=80&w=2000&auto=format&fit=crop" 
-              alt="Rabari Elder in Rajasthan"
+              src="/images/jawai-village-path.jpg" 
+              alt="Rural village path leading to granite kopje in Jawai"
               className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
             />
           </div>

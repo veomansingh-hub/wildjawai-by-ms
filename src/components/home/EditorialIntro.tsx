@@ -43,8 +43,8 @@ export default function EditorialIntro() {
             className="relative w-full max-w-lg aspect-[3/4] overflow-hidden"
           >
             <img 
-              src="/images/jawai-landscape.jpg" 
-              alt="Jawai Granite Landscape" 
+              src="/images/jawai-hazy-sunset.jpg" 
+              alt="Jawai Granite Landscape at Sunset"
               className="w-full h-full object-cover"
             />
           </motion.div>

@@ -227,8 +227,8 @@ export default function HowToReachJawaiArticle() {
         <div className="max-w-6xl mx-auto px-6 lg:px-12 mb-16 md:mb-24">
             <div className="aspect-[21/9] bg-sand mb-16 overflow-hidden">
               <img 
-                src="/images/jawai-landscape.jpg" 
-                alt="Jawai landscape at dawn"
+                src="/images/jawai-road.jpg" 
+                alt="Road leading into the granite kopjes of Jawai, Rajasthan at dawn"
                 className="w-full h-full object-cover"
               />
             </div>

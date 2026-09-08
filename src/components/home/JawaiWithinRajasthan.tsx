@@ -15,9 +15,9 @@ export default function JawaiWithinRajasthan() {
       {/* Very faint background landscape abstraction or map implication */}
       <div className="absolute top-0 right-0 w-2/3 h-full opacity-[0.03] pointer-events-none">
         <img 
-          src="https://images.unsplash.com/photo-1599661559862-e42142e88a38?q=80&w=2940&auto=format&fit=crop" 
-          alt="Vintage Map / Compass Travel Theme"
-          className="absolute inset-0 w-full h-full object-cover opacity-[0.15] grayscale mix-blend-multiply"
+          src="/images/travel-bag-view.jpg" 
+          alt="Travel Bag Overlooking Jawai"
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.25] grayscale mix-blend-multiply"
         />
       </div>
 
