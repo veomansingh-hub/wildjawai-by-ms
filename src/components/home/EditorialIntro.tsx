@@ -43,7 +43,7 @@ export default function EditorialIntro() {
             className="relative w-full max-w-lg aspect-[3/4] overflow-hidden"
           >
             <img 
-              src="https://images.unsplash.com/photo-1627443178229-87a32edbaaa5?q=80&w=2940&auto=format&fit=crop" 
+              src="/images/jawai-landscape.jpg" 
               alt="Jawai Granite Landscape" 
               className="w-full h-full object-cover"
             />

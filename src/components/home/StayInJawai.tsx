@@ -90,9 +90,13 @@ export default function StayInJawai() {
             transition={{ duration: 1.5, ease: [0.25, 1, 0.5, 1] }}
             className="w-full aspect-[4/5] lg:aspect-[3/4] overflow-hidden bg-basalt/5"
           >
-            <img 
+            <motion.img
+              initial={{ scale: 1.05 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
               src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=2940&auto=format&fit=crop" 
-              alt="Luxury Stay in Jawai" 
+              alt="Luxury Canvas Tents in Jawai"
               className="w-full h-full object-cover"
             />
           </motion.div>

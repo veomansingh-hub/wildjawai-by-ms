@@ -14,7 +14,7 @@ const guides = [
     category: "GETTING HERE",
     readingTime: "8 min read",
     summary: "A practical guide to trains, airports, buses, fares and transfers into Jawai. How to navigate Sumerpur–Jawai Bandh, Falna, Abu Road, and Jodhpur gateways.",
-    image: "https://images.unsplash.com/photo-1549646467-17ed488dc476?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/jawai-landscape.jpg",
     details: "Essential railway options, exact station codes, verified train connections from Falna and Abu Road, Jodhpur Airport road routes, indicative public transport costs and pre-arranged station pickup logistics."
   },
   {
@@ -23,7 +23,7 @@ const guides = [
     category: "Safari Guide",
     readingTime: "5 min read",
     summary: "What a private drive through Jawai's granite hills actually involves — from dawn departures to tracking techniques and respectful viewing etiquette.",
-    image: "https://images.unsplash.com/photo-1549646467-17ed488dc476?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/leopard-safari.jpg",
     details: "Private open-jeep drives operate twice daily. Morning drives leave before first light (around 05:30–06:30) when leopards descend from high granite kopjes. Dusk drives depart around 15:30–16:30 as temperatures cool. No fixed gates or rigid routes exist — experienced local trackers navigate based on territory knowledge, alarm calls and morning tracks."
   },
   {
@@ -32,7 +32,7 @@ const guides = [
     category: "Seasonality",
     readingTime: "6 min read",
     summary: "Peak winter window (October–March), warm summer sightings (April–June) and the monsoon transition broken down honestly.",
-    image: "https://images.unsplash.com/photo-1627443178229-87a32edbaaa5?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/jawai-landscape.jpg",
     details: "October to March is peak season with crisp morning air, comfortable midday sunshine and maximum wildlife activity. November through February also coincides with migratory waterfowl at Jawai Dam. Summer (April–May) reaches 38–42°C in the afternoon, but leopards concentrate predictably near water holes, making dawn drives exceptionally productive."
   },
   {
@@ -41,7 +41,7 @@ const guides = [
     category: "Wildlife & Habitats",
     readingTime: "4 min read",
     summary: "The winter transformation of Jawai reservoir: bar-headed geese, flamingos, sarus cranes, and marsh crocodiles.",
-    image: "https://images.unsplash.com/photo-1663488257088-dc780d6f466b?q=80&w=1000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555505019-8c3f1c4aba5f?q=80&w=2000&auto=format&fit=crop", // Great Indian birds/water image
     details: "Beyond the big cats, Jawai reservoir is western Rajasthan's largest water body. From late October to March, thousands of migratory birds settle along the shoreline alongside resident mugger crocodiles sunning on sandbanks."
   }
 ];

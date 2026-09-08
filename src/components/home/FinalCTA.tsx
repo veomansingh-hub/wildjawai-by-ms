@@ -15,7 +15,7 @@ export default function FinalCTA() {
           whileInView={{ scale: 1.05 }}
           viewport={{ once: false }}
           transition={{ duration: 15, ease: "linear" }}
-          src="https://images.unsplash.com/photo-1681283626786-2a4c147493a3?q=80&w=2940&auto=format&fit=crop"
+          src="/images/jawai-landscape.jpg"
           alt="Jawai Sunset"
           className="w-full h-full object-cover object-center"
         />

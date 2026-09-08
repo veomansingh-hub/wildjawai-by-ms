@@ -7,26 +7,29 @@ import { ArrowRight } from "lucide-react";
 const articles = [
   {
     title: "How a Jawai leopard safari works",
-    category: "Guide",
-    image: "https://images.unsplash.com/photo-1549646467-17ed488dc476?q=80&w=1000&auto=format&fit=crop",
+    category: "Safari Guide",
+    readingTime: "5 min read",
+    image: "/images/leopard-safari.jpg",
     size: "large"
   },
   {
-    title: "Understanding Jawai's granite landscape",
-    category: "Environment",
-    image: "https://images.unsplash.com/photo-1627443178229-87a32edbaaa5?q=80&w=1000&auto=format&fit=crop",
+    title: "Best time to visit Jawai: Month-by-month guide",
+    category: "Seasonality",
+    readingTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=1000&auto=format&fit=crop",
     size: "small"
   },
   {
     title: "Rabari culture: The pastoral heart of Jawai",
     category: "Culture",
-    image: "https://images.unsplash.com/photo-1524222717473-730000096953?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/jawai-landscape.jpg",
     size: "small"
   },
   {
-    title: "Birdlife around Jawai Dam in Winter",
-    category: "Wildlife",
-    image: "https://images.unsplash.com/photo-1663488257088-dc780d6f466b?q=80&w=1000&auto=format&fit=crop",
+    title: "Water and wings: Birdlife around Jawai Dam",
+    category: "Wildlife & Habitats",
+    readingTime: "4 min read",
+    image: "https://images.unsplash.com/photo-1555505019-8c3f1c4aba5f?q=80&w=1000&auto=format&fit=crop",
     size: "medium"
   }
 ];

@@ -225,13 +225,13 @@ export default function HowToReachJawaiArticle() {
 
         {/* Cinematic Lead Photography */}
         <div className="max-w-6xl mx-auto px-6 lg:px-12 mb-16 md:mb-24">
-          <div className="w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden bg-sand relative">
-            <img
-              src="https://images.unsplash.com/photo-1549646467-17ed488dc476?q=80&w=2000&auto=format&fit=crop"
-              alt="Jawai Rajasthan Granite Landscape and Safari Country"
-              className="w-full h-full object-cover"
-            />
-          </div>
+            <div className="aspect-[21/9] bg-sand mb-16 overflow-hidden">
+              <img 
+                src="/images/jawai-landscape.jpg" 
+                alt="Jawai landscape at dawn"
+                className="w-full h-full object-cover"
+              />
+            </div>
           <p className="text-xs text-basalt/50 font-light mt-3 tracking-wide text-right">
             The granite hills and thorn-scrub wilderness of Jawai, Pali district.
           </p>

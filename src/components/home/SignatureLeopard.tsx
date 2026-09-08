@@ -8,12 +8,12 @@ export default function SignatureLeopard() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-basalt/60 z-10" />
         <motion.img
-          initial={{ scale: 1 }}
-          whileInView={{ scale: 1.05 }}
-          viewport={{ once: false }}
-          transition={{ duration: 10, ease: "easeOut" }}
-          src="https://images.unsplash.com/photo-1549646467-17ed488dc476?q=80&w=2940&auto=format&fit=crop"
-          alt="Wild Leopard"
+          initial={{ scale: 1.05 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          src="/images/leopard-safari.jpg"
+          alt="Jawai Leopard on Granite"
           className="w-full h-full object-cover object-center opacity-70"
         />
       </div>

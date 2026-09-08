@@ -15,11 +15,17 @@ export default function OurStory() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="w-full lg:w-1/2 relative min-h-[50vh] lg:min-h-full"
         >
-          <img 
-            src="https://images.unsplash.com/photo-1534062489679-b13c719e83ec?q=80&w=2940&auto=format&fit=crop" 
-            alt="Founders in Jawai Landscape" 
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+          <div className="absolute inset-0 bg-sand overflow-hidden">
+            <motion.img
+              initial={{ scale: 1.05 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?q=80&w=2000&auto=format&fit=crop" 
+              alt="Rabari Elder in Rajasthan"
+              className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
+            />
+          </div>
         </motion.div>
 
         {/* Right side: Content */}
