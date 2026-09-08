@@ -32,15 +32,37 @@ export default function OurStoryPage() {
           <div className="flex flex-col">
             <span className="font-serif text-6xl md:text-7xl text-terracotta/25 italic mb-6">01</span>
             <span className="text-xs tracking-widest uppercase text-terracotta mb-2 font-medium">
-              Founder &middot; Traveller&apos;s Perspective
+              Founder &middot; The Traveller&apos;s Perspective
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl mb-6">Man Singh</h2>
-            <div className="space-y-5 text-lg font-light text-basalt/80 leading-relaxed">
+            <h2 className="font-serif text-4xl md:text-5xl mb-8">Man Singh</h2>
+            <div className="space-y-6 text-lg font-light text-basalt/80 leading-relaxed">
               <p>
-                Born in India and educated at Jawahar Navodaya Vidyalaya, Man spent 17 years living abroad and travelling across Europe, Asia and parts of South America.
+                Years of living abroad and travelling across Europe, Asia and South America taught Man something simple: the journeys you remember most are rarely the ones with the longest itinerary. They are the ones where the right people quietly make everything work.
               </p>
               <p>
-                Having experienced both exceptional wilderness lodges and poorly managed mass-tourism, he brings the traveller&apos;s standard to Wild Jawai: meticulous on-ground coordination, clear communication, transparent pricing before payment, and the quiet expectation of luxury.
+                That idea sits at the heart of Wild Jawai.
+              </p>
+              <p>
+                Having experienced travel from the guest’s side — good hotels and disappointing ones, exceptional guides and forgettable tours, effortless journeys and badly organised ones — Man wanted Wild Jawai to feel different from a typical safari operator.
+              </p>
+              <p>
+                There are no journeys built around what is easiest to sell. Instead, the starting point is the traveller: how much time you have, what kind of place you want to stay in, how interested you are in wildlife, photography, culture or simply slowing down, and what would make Jawai meaningful for you.
+              </p>
+              <p>
+                From the moment you begin planning, the details are handled with the same questions Man asks when travelling himself:
+              </p>
+              <div className="p-6 bg-sand/40 border-l border-terracotta/40 my-4 space-y-2 text-base md:text-lg italic font-serif text-basalt/85">
+                <p>&ldquo;Is this genuinely worth doing?</p>
+                <p>Is this the right person to guide them?</p>
+                <p>Is the price clear?</p>
+                <p>Will someone be there when they arrive?</p>
+                <p>And will this feel like Jawai — rather than just another safari?&rdquo;</p>
+              </div>
+              <p>
+                The result is a more personal way to experience the region: thoughtfully planned, locally connected and supported on the ground from arrival to departure.
+              </p>
+              <p className="font-serif italic text-xl md:text-2xl text-basalt pt-4 border-t border-basalt/10 leading-snug">
+                Because the real luxury in travel is not excess. It is knowing that someone has thought about the details before you ever have to.
               </p>
             </div>
             {/* Elegant placeholder for genuine founder portrait */}
