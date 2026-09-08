@@ -9,14 +9,16 @@ export default function Hero() {
     <section className="relative h-[100svh] w-full overflow-hidden flex items-end justify-center pb-24 md:pb-32">
       {/* Background Media */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/60 z-10" />
+        {/* Multi-stop cinematic gradient overlay for crystal clear text readability over the golden haze */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/30 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none" />
         <motion.img
           initial={{ scale: 1.05 }}
           animate={{ scale: 1 }}
           transition={{ duration: 10, ease: "easeOut" }}
-          src="https://images.unsplash.com/photo-1681283626786-2a4c147493a3?q=80&w=2940&auto=format&fit=crop"
-          alt="Jawai Leopard Landscape"
-          className="w-full h-full object-cover object-[center_30%]"
+          src="/images/jawai-hero-leopard.jpg"
+          alt="Jawai Leopard overlooking the granite kopjes and Jawai Dam at sunrise"
+          className="w-full h-full object-cover object-[center_40%]"
         />
         {/* Placeholder for actual video later */}
         {/* <video src="/videos/jawai-hero.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" /> */}
@@ -30,7 +32,7 @@ export default function Hero() {
           transition={{ duration: 1.2, delay: 0.6, ease: [0.25, 1, 0.5, 1] }}
           className="overflow-hidden mb-6 md:mb-8"
         >
-          <p className="text-[10px] md:text-xs tracking-[0.3em] uppercase opacity-90">
+          <p className="text-[10px] md:text-xs tracking-[0.3em] uppercase text-white font-medium drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
             Jawai &middot; Rajasthan &middot; India
           </p>
         </motion.div>
@@ -41,7 +43,7 @@ export default function Hero() {
           transition={{ duration: 1.5, delay: 0.9, ease: [0.25, 1, 0.5, 1] }}
           className="w-full"
         >
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-[100px] xl:text-[120px] leading-[1.05] tracking-tight mb-8 drop-shadow-lg">
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-[100px] xl:text-[120px] leading-[1.05] tracking-tight mb-8 drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]">
             COME FOR THE LEOPARDS.<br />
             LEAVE WITH JAWAI.
           </h1>
@@ -51,7 +53,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.4, ease: "easeOut" }}
-          className="text-base md:text-xl font-light max-w-2xl mx-auto mb-12 text-white/95"
+          className="text-base md:text-xl font-light max-w-2xl mx-auto mb-12 text-white/95 drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] leading-relaxed"
         >
           Private safaris, considered stays and journeys shaped by people who know Jawai.
         </motion.p>
