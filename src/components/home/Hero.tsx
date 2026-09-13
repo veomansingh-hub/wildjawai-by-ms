@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowDown } from "lucide-react";
 
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative h-[100svh] w-full overflow-hidden flex items-end justify-center pb-24 md:pb-32">
@@ -12,14 +14,21 @@ export default function Hero() {
         {/* Multi-stop cinematic gradient overlay for crystal clear text readability over the golden haze */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/30 z-10 pointer-events-none" />
         <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none" />
-        <motion.img
+        <motion.div
           initial={{ scale: 1.05 }}
           animate={{ scale: 1 }}
           transition={{ duration: 10, ease: "easeOut" }}
-          src="/images/jawai-hero-leopard.jpg"
-          alt="Jawai Leopard overlooking the granite kopjes and Jawai Dam at sunrise"
-          className="w-full h-full object-cover object-[center_40%]"
-        />
+          className="relative w-full h-full"
+        >
+          <Image
+            src="/images/jawai-hero-leopard.jpg"
+            alt="Jawai Leopard overlooking the granite kopjes and Jawai Dam at sunrise"
+            fill
+            priority
+            quality={90}
+            className="object-cover object-[center_40%]"
+          />
+        </motion.div>
         {/* Placeholder for actual video later */}
         {/* <video src="/videos/jawai-hero.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" /> */}
       </div>

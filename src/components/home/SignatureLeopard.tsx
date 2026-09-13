@@ -1,21 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function SignatureLeopard() {
   return (
     <section id="safari" className="relative h-[90vh] md:h-[100vh] w-full flex items-center justify-center overflow-hidden bg-basalt text-white">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-basalt/60 z-10" />
-        <motion.img
+        <motion.div
           initial={{ scale: 1.05 }}
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          src="/images/jawai-leopard-walking.jpg"
-          alt="Jawai Leopard on Granite"
-          className="w-full h-full object-cover object-center opacity-70"
-        />
+          className="relative w-full h-full"
+        >
+          <Image
+            src="/images/jawai-leopard-walking.jpg"
+            alt="Jawai Leopard on Granite"
+            fill
+            quality={90}
+            className="object-cover object-center opacity-70"
+          />
+        </motion.div>
       </div>
 
       <div className="relative z-20 max-w-5xl mx-auto px-6 text-center">

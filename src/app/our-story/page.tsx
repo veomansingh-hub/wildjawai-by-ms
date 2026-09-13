@@ -89,11 +89,12 @@ export default function OurStoryPage() {
                 He provides the indispensable regional anchor: generational respect for the Rabari community, an instinct for wildlife movement across private and village lands, and trusted local coordination that cannot be learned from a map or travel book.
               </p>
             </div>
-            {/* Elegant placeholder for genuine founder portrait */}
-            <div className="mt-8 aspect-[4/5] bg-sand/60 relative overflow-hidden border border-basalt/10 flex items-center justify-center text-center p-8">
-              <div className="max-w-xs text-xs tracking-widest uppercase text-basalt/50 font-mono">
-                [ Authentic Portrait &middot; Kalpesh Deora ]
-              </div>
+            <div className="mt-8 aspect-[4/5] bg-sand/60 relative overflow-hidden">
+              <img 
+                src="/images/jawai-village-view.jpg" 
+                alt="Kalpesh Deora - Jawai Native"
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              />
             </div>
           </div>
         </div>
