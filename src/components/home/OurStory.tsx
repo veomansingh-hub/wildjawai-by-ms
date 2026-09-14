@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function OurStory() {
   return (
@@ -16,14 +17,12 @@ export default function OurStory() {
           className="w-full lg:w-1/2 relative min-h-[50vh] lg:min-h-full"
         >
           <div className="absolute inset-0 bg-sand overflow-hidden">
-            <motion.img
-              initial={{ scale: 1.05 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
+            <Image
               src="/images/jawai-village-path.jpg" 
               alt="Rural village path leading to granite kopje in Jawai"
-              className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
             />
           </div>
         </motion.div>

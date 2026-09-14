@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const experiences = [
@@ -64,10 +65,12 @@ export default function ExperienceJawai() {
                   className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-20 items-center group`}
                 >
                   <div className={`w-full ${isEven ? 'lg:w-7/12' : 'lg:w-8/12'} overflow-hidden relative aspect-[4/5] lg:aspect-[3/2]`}>
-                    <motion.img 
+                    <Image 
                       src={exp.image} 
                       alt={exp.title}
-                      className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
                     />
                   </div>
                   

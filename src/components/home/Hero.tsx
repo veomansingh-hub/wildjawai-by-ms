@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative h-[100svh] w-full overflow-hidden flex items-end justify-center pb-24 md:pb-32">
+    <section className="relative h-[100dvh] w-full overflow-hidden flex items-end justify-center pb-24 md:pb-32">
       {/* Background Media */}
       <div className="absolute inset-0 z-0">
         {/* Multi-stop cinematic gradient overlay for crystal clear text readability over the golden haze */}
@@ -75,13 +75,13 @@ export default function Hero() {
         >
           <Link
             href="/plan"
-            className="w-full sm:w-auto px-10 py-4 bg-white/90 backdrop-blur-sm text-basalt text-xs tracking-widest uppercase hover:bg-white transition-colors"
+            className="w-full sm:w-auto px-10 py-4 bg-white/90 backdrop-blur-sm text-basalt text-xs tracking-widest uppercase hover:bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 transition-colors"
           >
             Begin Your Journey
           </Link>
           <Link
             href="/#experiences"
-            className="w-full sm:w-auto px-10 py-4 border border-white/40 text-white text-xs tracking-widest uppercase hover:border-white transition-colors"
+            className="w-full sm:w-auto px-10 py-4 border border-white/40 text-white text-xs tracking-widest uppercase hover:border-white focus:outline-none focus:ring-2 focus:ring-white transition-colors"
           >
             Discover Jawai
           </Link>
@@ -94,6 +94,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 2.2 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3"
+        aria-hidden="true"
       >
         <ArrowDown className="w-4 h-4 text-white/70 animate-bounce" strokeWidth={1} />
       </motion.div>

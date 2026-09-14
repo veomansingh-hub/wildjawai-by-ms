@@ -33,8 +33,9 @@ export default function Footer() {
           <h4 className="text-xs tracking-widest uppercase text-sand mb-6">Connect</h4>
           <ul className="space-y-4 text-sm text-sand/80">
             <li>
-              <Link href="/plan" className="hover:text-terracotta transition-colors inline-flex items-center gap-2">
+              <Link href="/plan" className="group relative inline-flex items-center gap-2 hover:text-terracotta transition-colors pb-1">
                 Plan Your Journey
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-terracotta transition-all duration-300 ease-out group-hover:w-full"></span>
               </Link>
             </li>
             <li>
@@ -42,10 +43,11 @@ export default function Footer() {
                 href={CONTACT.whatsAppUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="hover:text-terracotta transition-colors inline-flex items-center gap-2"
+                className="group relative inline-flex items-center gap-2 hover:text-terracotta transition-colors pb-1"
               >
                 <MessageCircle className="w-3.5 h-3.5 text-terracotta" />
                 WhatsApp Us
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-terracotta transition-all duration-300 ease-out group-hover:w-full"></span>
               </a>
             </li>
             <li>

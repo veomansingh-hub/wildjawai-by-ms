@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import Link from "next/link";
@@ -52,6 +52,24 @@ export default function EnquiryPlanner() {
   const prevStep = () => {
     if (currentStep > 0) setCurrentStep((prev) => prev - 1);
   };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Enter') {
+        // Prevent default form submission if they are in an input
+        e.preventDefault();
+        if (currentStep === steps.length - 1) {
+          submit();
+        } else {
+          nextStep();
+        }
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentStep, when, adults, focusOptions, stayStyle, arrival, contactInfo]);
 
   const buildWhatsAppMessage = () => {
     return encodeURIComponent(

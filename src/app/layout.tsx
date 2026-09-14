@@ -1,7 +1,22 @@
 import type { Metadata } from "next";
+import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+
+// Configure next/font/google for zero layout shift
+const inter = Inter({ 
+  subsets: ["latin"], 
+  display: "swap", 
+  variable: "--font-inter" 
+});
+
+const newsreader = Newsreader({ 
+  subsets: ["latin"], 
+  style: ["normal", "italic"], 
+  display: "swap", 
+  variable: "--font-newsreader" 
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://wildjawai.in"),
@@ -12,6 +27,17 @@ export const metadata: Metadata = {
   description: "Private Jawai leopard safaris, handpicked camps, and tailored Rajasthan journeys shaped with patience and deep local knowledge.",
   alternates: {
     canonical: "/"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   openGraph: {
     title: "Wild Jawai — The Wild Side of Rajasthan",
@@ -45,12 +71,33 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Rich Structured Data for SEO
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Wild Jawai",
+    "image": "https://wildjawai.in/og-image.jpg",
+    "description": "Private Jawai leopard safaris, handpicked camps, and tailored Rajasthan journeys.",
+    "url": "https://wildjawai.in",
+    "telephone": "+919983721179",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jawai",
+      "addressRegion": "Rajasthan",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.instagram.com/wildjawai/"
+    ]
+  };
+
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`scroll-smooth ${inter.variable} ${newsreader.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className="font-sans bg-ivory text-basalt antialiased min-h-screen flex flex-col selection:bg-terracotta selection:text-white">
         <Navigation />

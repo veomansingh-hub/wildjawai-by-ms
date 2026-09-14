@@ -94,6 +94,7 @@ export default function Navigation() {
               className="p-2 -mr-2"
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open menu"
+              aria-expanded={mobileMenuOpen}
             >
               <Menu className="w-6 h-6" strokeWidth={1.5} />
             </button>
@@ -108,7 +109,7 @@ export default function Navigation() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
-            className="fixed inset-0 z-[60] bg-ivory text-basalt flex flex-col justify-between"
+            className="fixed inset-0 z-[60] bg-ivory/95 backdrop-blur-2xl text-basalt flex flex-col justify-between"
           >
             <div className="px-6 py-8 flex items-center justify-between h-auto border-b border-basalt/10">
               <Link href="/" className="font-serif text-2xl tracking-[0.2em] uppercase" onClick={() => setMobileMenuOpen(false)}>
